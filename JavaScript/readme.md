@@ -11,29 +11,27 @@
   博客上看到的说法简单的理解是 调用这个函数的对象。</br>
   
 ###a).
-  如直接在全局中调用函数：</br> 
+如直接在全局中调用函数：</br> 
+`var name = "tom";  
+function test(){  
+   console.log(this.name); 
+}  
+test();`
           
-  `function test(){
-     console.log(this.a);
-   };
-   test();`
-          
-   </br>此时调用，是在全局中调用，调用函数的对象指的的window，当然window对象也是浏览器特有，如果换一个宿主环境，可能不存在window对象。
+此时调用，是在全局中调用，调用函数的对象指的的window，当然window对象也是浏览器特有，如果换一个宿主环境，可能不存在window对象。
    
 ###b).
-   作为构造函数调用：</br>
-   这里涉及到构造函数调用时发生的步骤，构造函数生成时究竟发生了什么呢？这个在JavaScript模式里面有详细提及，但是现在没有归纳总结...</br>
-   
-  `function People(name){
-     this.name = name;
-     this.say = function (){
-       console.log(this.name);
-     }
-   }
-   var tom = new People("tom");  
-   tom.say();`
-   
-   this 返回给新生成的对象。 ====》这里又想到了 最近从哪本书里看到的一句话，每个函数都是有返回的？还是我记错了，只是说的构造函数？</br>
+作为构造函数调用：</br>
+这里涉及到构造函数调用时发生的步骤，构造函数生成时究竟发生了什么呢？这个在JavaScript模式里面有详细提及，但是现在没有归纳总结...</br>
+`function People(name){
+this.name = name;
+this.say = function (){
+console.log(this.name);
+}
+}
+var tom = new People("tom");
+tom.say();`
+<br/>this 返回给新生成的对象。 ====》这里又想到了 最近从哪本书里看到的一句话，每个函数都是有返回的？还是我记错了，只是说的构造函数？</br>
    
 ###c).
    作为方法调用：</br>
