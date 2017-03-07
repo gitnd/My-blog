@@ -1,2 +1,2 @@
 # my-blog
-everyday note
+迈开步，齐步走。
