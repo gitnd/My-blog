@@ -24,13 +24,13 @@
    作为构造函数调用：</br>
    这里涉及到构造函数调用时发生的步骤，构造函数生成时究竟发生了什么呢？这个在JavaScript模式里面有详细提及，但是现在没有归纳总结...</br>
    
-     `function People(name){
+  `function People(name){
      this.name = name;
      this.say = function (){
        console.log(this.name);
      }
    }
-   var tom = new People("tom");
+   var tom = new People("tom");  
    tom.say();`
    
    this 返回给新生成的对象。 ====》这里又想到了 最近从哪本书里看到的一句话，每个函数都是有返回的？还是我记错了，只是说的构造函数？</br>
