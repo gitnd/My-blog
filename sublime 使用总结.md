@@ -1,6 +1,8 @@
 1.快捷输入插件使用 emmet
 ===============================
   引用博客地址：http://blog.csdn.net/rovast/article/details/45647887
+  <br/>
+  快捷使用方式 官方文档地址：https://docs.emmet.io/cheat-sheet/
   <br/>
  a.修改快捷键为tab<br/>
  `
